@@ -46,6 +46,7 @@ Second Phase: "Cloud Evaluation" & Presentation
 ### Differences to the Service Presented in the Lecture
 
 - Authentication omitted for the sake of simplicity
+  - if there is some time left, this is a topic you may want to look into based on your chosen solution
 - everything uses REST instead of SOAP
 - PostgreSQL instead of Oracle database
 - no address verification service
