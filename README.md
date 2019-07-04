@@ -4,14 +4,14 @@
 
 ## Task
 
-Setup:
+### Setup
 - form teams of 3-4 people
   - try to make the teams cross-functional, so you have technical and business expertise in your team
 - add your team to the whiteboard and indicate the desired time slots for
   - Milestone "Cloud Scope" (max. 1 hour after beginning the exercise)
   - Review (towards the end of the exercise, before final presentations)
   
-First Phase: Milestone "Cloud Scope" & Backlog
+### First Phase: Milestone "Cloud Scope" & Backlog
 - define the "Cloud Scope" of your application transformation
 - sketch a high-level architecture including
   - components to be transformed/migrated
@@ -20,7 +20,7 @@ First Phase: Milestone "Cloud Scope" & Backlog
 - prepare an initial backlog for the topics you will be working on in the next phase, a list of possible topics is given further below
 - present the items above to the lecturers during your chosen timeslot before proceeding to the next phase
 
-Second Phase: "Cloud Evaluation" & Presentation
+### Second Phase: "Cloud Evaluation" & Review
 - work on your backlog
 - prepare a short presentation (5-10 minutes) for your fellow students with 3-5 of the following topics:
   - learnings
