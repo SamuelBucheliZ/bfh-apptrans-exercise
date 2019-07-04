@@ -49,7 +49,7 @@ Second Phase: "Cloud Evaluation" & Presentation
 - everything uses REST instead of SOAP
 - PostgreSQL instead of Oracle database
 - no address verification service
-- log data is also shipped via REST instead of SFTP
+- log data is also shipped via REST instead of SFTP (this part was called "Verrechnung", i.e., billing, in the lecture)
   - however, for the sake of the exercise, please assume that the shell script to ship the logs needs to be used
 - the account service has the same role as the LDAP, but also uses REST
   - however, for testing purposes, it is  currently accessible from the internet, this may change again later
