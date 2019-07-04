@@ -28,6 +28,7 @@ Second Phase: "Cloud Evaluation" & Presentation
   - observations
   - open questions
   - where did we get lucky? where not?
+  - risks?
   - demo of running service
   - etc.
 - prepare a brief review of the things you worked on for the lecturers and present them in your chosen timeslot (we will mainly focus on the presentation)
