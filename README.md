@@ -5,7 +5,7 @@
 ## Task
 
 ### Setup
-- form 4 teams of 3-4 people
+- form teams of 3-4 people
   - try to make the teams cross-functional, so you have technical and business expertise in your team
 - add your team to the whiteboard and indicate the desired time slots for
   - Milestone "Cloud Scope" (max. 1 hour after beginning the exercise)
