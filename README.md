@@ -1,7 +1,5 @@
 # Application Transformation Exercise
 
-*WARNING*: This is a beta version of the this exercise. Proceed with caution!
-
 ## Task
 
 ### Setup
