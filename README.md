@@ -5,7 +5,7 @@
 ### Setup
 - form teams of 3-4 people
   - try to make the teams cross-functional, so you have technical and business expertise in your team
-- add your team to the whiteboard and indicate the desired time slots for
+- let us know who is in your team and indicate the desired time slots for your team for:
   - Milestone "Cloud Scope" (max. 1 hour after beginning the exercise)
   - Review (towards the end of the exercise, before final presentations)
   
@@ -20,7 +20,7 @@
 
 ### Second Phase: "Cloud Evaluation" & Review
 - work on your backlog
-- prepare a short presentation (5-10 minutes) for your fellow students with 3-5 of the following topics:
+- prepare a short presentation (max. 5 minutes) for your fellow students with 2-3 of the following topics:
   - learnings
   - "aha!" moments
   - observations
