@@ -55,6 +55,13 @@
 - the account service has the same role as the LDAP, but also uses REST
   - however, for testing purposes, it is  currently accessible from the internet, this may change again later
 
+#### Components
+![PCWS Components](img/components-PCWS_Components.png)
+
+#### Sequences
+![PCWS Sequences](img/sequence-PCWS_Sequences.png)
+
+
 ### The Services
 
 - PrintCode Web Service: https://github.com/SamuelBucheliZ/bfh-pcws

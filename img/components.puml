@@ -1,0 +1,42 @@
+@startuml
+
+title PCWS Components
+
+[Customer ERP System] as Customer
+
+package "Paketblitz" {
+  [PCWS Viewer] as PCWSViewer
+  package "PCWS System" {
+      interface "REST" as PCWSREST
+      [PCWS]
+      database "PostgreSQL"
+  }
+  interface "REST" as AccountServiceREST
+  [Account Service] as AccountService
+  interface "REST" as DatalogServiceREST
+  [Datalog Service] as DatalogService
+}
+
+Customer -> PCWSREST
+PCWSViewer --> PCWSREST
+note left of PCWSViewer
+  for manual testing
+end note
+PCWSREST - PCWS
+PCWS -> PostgreSQL
+PCWS --> AccountServiceREST
+note bottom of AccountService
+  synchronous call
+  during image
+  generation
+end note
+AccountServiceREST -- AccountService
+PCWS --> DatalogServiceREST
+note bottom of DatalogService
+  asynchronous call
+  in batches with
+  bash script
+end note
+DatalogServiceREST -- DatalogService
+
+@enduml
