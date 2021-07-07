@@ -15,11 +15,13 @@
   - components to be transformed/migrated
   - integration and interfaces between customer systems, other Paketblitz services, and the new components in the cloud
   - required adjustments/transformations of the PC-WS application
-- prepare an initial backlog for the topics you will be working on in the next phase, a list of possible topics is given further below
+- prepare an initial backlog for a cloud evaluation PoC: try to get the even more simplified PC-WS (see below) running on a cloud platform of your choice (you may also choose to work with containers, e.g., docker-compose or Kubernetes).
+  -  feel free to add further topics as listed below
 - present the items above to the lecturers during your chosen timeslot before proceeding to the next phase
 
 ### Second Phase: "Cloud Evaluation" & Review
-- work on your backlog
+- work on your backlog, i.e., try to get a PoC running
+  - if you discover further things to be done along the way, take note of them and add them to the backlog 
 - prepare a short presentation (max. 5 minutes) for your fellow students with 2-3 of the following topics:
   - learnings
   - "aha!" moments
@@ -31,9 +33,8 @@
   - etc.
 - prepare a brief review of the things you worked on for the lecturers and present them in your chosen timeslot (we will mainly focus on the presentation)
 
-## Possible Topics to Work On
+## Possible Further Topics to Work On
 
-- Cloud Evaluation: As a proof of concept, try to get the even more simplified PC-WS (see below) running on a cloud platform of your choice (you may also choose to work with containers, e.g., docker-compose or Kubernetes).
 - IT Organization, Operations, and Support including CI/CD and DevOps: How would you organize this? What needs to be done? What do we need to look out for? Principles? Guidelines? Technical aspects?
 - TCO Analysis including a closer look at the business case: Calculate/estimate the cost of different variants. What kind of investements are justified? (You may want to combine this with the question below)
 - Transformation Estimation including a detailled analysis of the initial transformation: What steps are necessary? What is the required engineering effort?
@@ -45,7 +46,7 @@
 
 - Authentication omitted for the sake of simplicity
   - if there is some time left, this is a topic you may want to look into based on your chosen solution
-- everything uses REST instead of SOAP
+- everything uses REST instead of SOAP 
 - PostgreSQL instead of Oracle database
 - no address verification service
 - log data is also shipped via REST instead of SFTP (this part was called "Verrechnung", i.e., billing, in the lecture)
