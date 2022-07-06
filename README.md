@@ -1,6 +1,6 @@
 # Application Transformation Exercise
 
-## Task
+## Tasks
 
 ### Setup
 - form teams of 3-4 people
@@ -32,33 +32,36 @@
   - demo of running service
   - etc.
 - prepare a brief review of the things you worked on for the lecturers and present them in your chosen timeslot (we will mainly focus on the presentation)
+- send your presentation to the lecturer
+  - the presentation should at least contain an architecture diagram for your target architecture on the cloud provider of your choice 
+
+## Hints
+
+1. Focus on getting the web service itself running first
+   - PC-WS has various configuration options based on environment variables to easily mock dependencies
+   - initially, you may want to work with `SPRING_PROFILES_ACTIVE` set to `mock`, this enables mocks for all external dependencies
+2. Once you have the web service up and running, we recommend adding a database
+   - for this, set `SPRING_PROFILES_ACTIVE`  to `real`
+   - set `USE_DATALOG_SERVICE_MOCK` to `true`, this way, the datalog service part will still be mocked
+   - in this profile, `USE_CODE_SERVICE_MOCK` is has default value `false`, so the database will be used for generating unique IDs
+3. Finally, you can address the datalog service integration
+   - set `USE_DATALOG_SERVICE_MOCK` to `false` or simply do not set this value at all (`false` is the default)
 
 ## Possible Further Topics to Work On
+
+Based on your interests or if you have some time left over after having managed to run PC-WS, you may be interested in looking into some of the following topics:
 
 - IT Organization, Operations, and Support including CI/CD and DevOps: How would you organize this? What needs to be done? What do we need to look out for? Principles? Guidelines? Technical aspects?
 - TCO Analysis including a closer look at the business case: Calculate/estimate the cost of different variants. What kind of investements are justified? (You may want to combine this with the question below)
 - Transformation Estimation including a detailled analysis of the initial transformation: What steps are necessary? What is the required engineering effort?
 - The Far Future: Where could the cloud journey lead to? What are some new opportunities we gain after the initial transformation? What further optimizations or even new business cases would be possible?
 
-## The Even More Simplified PC-WS
-
-### Differences to the Service Presented in the Lecture
-
-- Authentication omitted for the sake of simplicity
-  - if there is some time left, this is a topic you may want to look into based on your chosen solution
-- everything uses REST instead of SOAP 
-- PostgreSQL instead of Oracle database
-- no address verification service
-- log data is also shipped via REST instead of SFTP (this part was called "Verrechnung", i.e., billing, in the lecture)
-  - however, for the sake of the exercise, please assume that the shell script to ship the logs needs to be used initially
-  - once you have successfully set up the shell script, you may consider exploring different integration variants
-- the account service has the same role as the LDAP, but also uses REST
-  - however, for testing purposes, it is  currently accessible from the internet, this may change again later
+## PC-WS
 
 #### Components
 ![PCWS Components](img/components-PCWS_Components.png)
 
-#### Sequences
+#### Processes
 ![PCWS Sequences](img/sequence-PCWS_Sequences.png)
 
 

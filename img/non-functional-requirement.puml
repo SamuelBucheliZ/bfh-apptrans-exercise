@@ -1,0 +1,51 @@
+@startuml
+skinparam style strictuml
+
+actor "Paketsystem\n Kunde" as Customer
+participant "Entry Server\n Load Balancer" as Entry
+participant PCWS
+database PostgreSQL
+participant "Account Service" as AccountService
+
+Customer -> Entry: generiere Etikette
+activate Entry
+
+note right of PCWS #FF7777
+Etikettengenerierung darf
+nicht mehr als 50ms dauern
+end note
+
+Entry -> PCWS: generiere Etikette
+activate PCWS #red
+
+PCWS -> AccountService: überprüfe Produktberechtigung
+activate AccountService  #gold
+note right of AccountService
+~5 ms
+end note
+PCWS <-- AccountService
+deactivate AccountService
+
+PCWS -> PostgreSQL: generiere eindeutige ID
+activate PostgreSQL  #gold
+note right of PostgreSQL
+~5 ms
+end note
+PCWS <-- PostgreSQL
+deactivate PostgreSQL
+PCWS -> PCWS: generiere Paketetikette
+activate PCWS #gold
+
+note right of PCWS
+~ 30-40 ms
+end note
+
+
+
+Entry <-- PCWS
+deactivate PCWS
+
+Customer <-- Entry: image
+deactivate Entry
+
+@enduml

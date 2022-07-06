@@ -1,28 +1,49 @@
 @startuml
 
-title PCWS Sequences
-
 actor Customer
 participant PCWS
 database PostgreSQL
-queue Disk
+queue Filesystem
 control transfer_logs.sh
 participant "Account Service" as AccountService
 participant "Datalog Service" as DatalogService
 
 Customer -> PCWS: request image
+activate PCWS
+
 
 PCWS -> AccountService: check account permission
-PCWS -> PCWS: generate image
-PCWS -> Disk: write data log
+activate AccountService
+PCWS <-- AccountService
+deactivate AccountService
 
-Customer <- PCWS: image
+PCWS -> PostgreSQL: create unique ID
+activate PostgreSQL
+PCWS <-- PostgreSQL
+deactivate PostgreSQL
+PCWS -> PCWS: generate image
+
+PCWS -> Filesystem: write data log
+activate Filesystem
+PCWS <-- Filesystem
+deactivate Filesystem
+
+Customer <-- PCWS: image
+deactivate PCWS
 
 ... some time later ...
 
+
 loop for each log
-  transfer_logs.sh -> Disk: read data log
+  transfer_logs.sh -> Filesystem: read data log
+  activate transfer_logs.sh
+  activate Filesystem
+  transfer_logs.sh <-- Filesystem
+  deactivate Filesystem
   transfer_logs.sh -> DatalogService: send data log
-  transfer_logs.sh <- DatalogService
+  activate DatalogService
+  transfer_logs.sh <-- DatalogService
+  deactivate DatalogService
+  deactivate transfer_logs.sh
 end log
 @enduml

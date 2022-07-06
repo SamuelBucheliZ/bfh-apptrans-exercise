@@ -1,7 +1,5 @@
 @startuml
 
-title PCWS Components
-
 [Customer ERP System] as Customer
 
 package "Paketblitz" {
