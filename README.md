@@ -68,10 +68,10 @@ Based on your interests or if you have some time left over after having managed 
 ### The Services
 
 - PrintCode Web Service: https://github.com/SamuelBucheliZ/bfh-pcws
-  - Live demo with mocked external systems at  https://bfh-pcws-mock.herokuapp.com/swagger-ui.html
+  - Live demo with mocked external systems at  https://bfh-pcws-mock.herokuapp.com/swagger-ui/index.html
 - Viewer: https://github.com/SamuelBucheliZ/bfh-pcws-viewer 
   - Live at https://samuelbucheliz.github.io/bfh-pcws-viewer/
 - Paketblitz Account Service: https://github.com/SamuelBucheliZ/bfh-paketblitz-account-service
-  - Live at https://bfh-paketblitz-account-service.herokuapp.com/swagger-ui.html
+  - Live at https://bfh-paketblitz-account-service.herokuapp.com/swagger-ui/index.html
 - Paketblitz Datalog Service: https://github.com/SamuelBucheliZ/bfh-paketblitz-datalog-service
-  - Live at https://bfh-paketblitz-datalog-service.herokuapp.com/swagger-ui.html
+  - Live at https://bfh-paketblitz-datalog-service.herokuapp.com/swagger-ui/index.html
